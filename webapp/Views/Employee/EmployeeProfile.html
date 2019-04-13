@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>MK REIMBURSEMENTS</title>
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="./css/template.css">
+
+</head>
+<body style = "background-color : orange;">
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand navbar-dark bg-dark static-top"
+		id="navbar"></nav>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<ul class="sidebar navbar-nav" id="sidebar">
+			<li class="nav-item ">
+				<a class="nav-link" href="employeehome"> 
+					<i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="employeeprofile">
+					<i class="fa fa-user"></i> 
+					<span>Profile</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="logout"> 
+					<i class="fas fa-sign-out-alt"></i> 
+					<span>Logout</span
+				></a>
+			</li>
+		</ul>
+
+		<div id="content-wrapper">
+
+			<div class="container-fluid">
+				<!-- Breadcrumbs-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+				<div class="card mb-3">
+					<div class="card-header" style="font-size: 40px;">
+						<i class="fas fa-cogs"></i> Setting
+					</div>
+					<div class="card-body">
+						<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h3 class="panel-title pull-left">Your photo</h3>
+									<div align="center">
+										<div class="col-lg-12 col-md-12">
+											<img class="img-thumbnail img-responsive"
+												background-image: url('../img/subzero.jpg')
+												width="300px" height="300px">
+										</div>
+										<div class="col-lg-12 col-md-12">
+											<button class="btn btn-primary">
+												<i class="fa fa-upload" aria-hidden="true"></i> Upload a new
+												profile photo!
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<br>
+
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h3 class="panel-title pull-left">Your Info</h3>
+									<form class="form-horizontal" action="updateemployee"
+										method="POST">
+
+										<label for="First_name">First name</label> <input type="text"
+											class="form-control" id="First_name" placeholder=""
+											name=fName> <label for="Last_name">Last name</label>
+										<input type="text" class="form-control" id="Last_name"
+											 name=lName> <label for="User_name">Username</label>
+										<input type="text" class="form-control" id="User_name"
+											 name=uName> <label for="Password">Password</label>
+										<input type="text" class="form-control" id="Password"
+											 name=password> <label
+											for="Address">Address</label> <input type="text"
+											class="form-control" id="Address" name=address
+											> <br>
+
+										<button id="update_btn" type="submit" class="btn btn-primary">Update
+											Profile</button>
+									</form>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<br> <br>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+			crossorigin="anonymous"></script>
+
+		<script src="Scripts/Navbar.js"></script>
+		<script src="Scripts/EmployeeJS/EmployeeSidebar.js"></script>
+</body>
+</html>

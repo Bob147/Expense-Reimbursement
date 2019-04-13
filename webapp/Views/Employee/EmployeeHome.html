@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>KONTEST KOMPLAINTS</title>
+
+
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+	integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="./css/template.css">
+
+</head>
+<body style="background-image: url('img/subzero.jpg'); background-size: cover;">
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand navbar-dark bg-dark static-top"
+		id="navbar"></nav>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<ul class="sidebar navbar-nav" id="sidebar">
+			<li class="nav-item active">
+				<a class="nav-link" href="employeehome"> 
+					<i class="fas fa-fw fa-tachometer-alt"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="employeeprofile">
+					<i class="fa fa-user"></i> 
+					<span>Profile</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="logout"> 
+					<i class="fas fa-sign-out-alt"></i> 
+					<span>Logout</span
+				></a>
+			</li>
+		</ul>
+
+		<div id="content-wrapper">
+
+			<div class="container-fluid">
+				<!-- Breadcrumbs-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+					<li class="breadcrumb-item active">Overview</li>
+				</ol>
+				<div class="card mb-3">
+					<div class="card-header" style="font-size: 40px;">
+						<i class="fas fa-table"></i> Request Table
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<input type="radio" id="all" name="requesttype" onclick="ShowAll()" checked="checked">all 
+							<input type="radio" id="pending" name="requesttype" onclick="ShowPending()">pending
+							<input type="radio" id="resolved" name="requesttype" onclick="ShowResolved()">resolved
+							
+							<table class="table table-striped table-hover" id="requestTable"
+								cellspacing="0">
+								<thead>
+									<tr>
+										<th scope="col">Request Id</th>
+										<th scope="col">Type</th>
+										<th scope="col">Amount</th>
+										<th scope="col">Status</th>
+										<th scope="col">Decision</th>
+									</tr>
+								</thead>
+
+								<tbody id="requestTableBody">
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<h2>Komplain Now</h2>
+				<form class="form_container" action="requests" method="POST">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<input type=number name=amount class="form-control" min="0.01"
+								step="0.01" placeholder="Amount">
+						</div>
+						<div class="form-group col-md-6">
+							<select name="expenseType" class="form-control">
+								<option value="Select a Type" selected>Select a Type</option>
+								<option value="Dismemberment">Dismemberment</option>
+								<option value="Relocation to new Realm">Relocation to new Realm</option>
+								<option value="Genitals Punched or Kicked">Genitals Punched or Kicked</option>
+								<option value="Prosthetics Expense">Prosthetics Expense</option>
+								<option value="Made into Jelly">Made into Jelly</option>
+								<option value="Wrong Demension Expense">Wrong Demension Expense</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+					<button id="add_btn" type="submit" class="btn btn-primary">Add Request</button>
+				</form>
+
+				<br> <br> <br>
+
+				<!-- Sticky Footer -->
+				<footer class="sticky-footer">
+					<div class="container my-auto">
+						<div class="copyright text-center my-auto">
+							<span>Copyright © The Crying Foundation 2019</span>
+						</div>
+					</div>
+				</footer>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
+
+	<script src="Scripts/Navbar.js"></script>
+	<script src="Scripts/EmployeeJS/EmployeeHome.js"></script>
+
+</body>
+</html>
