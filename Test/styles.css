@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color:white;
+  }
+  
+  
+  #main{
+    
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/pledgetest.png');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    
+  }
+
+#total{
+    width: 50%;
+    position:absolute;
+    width:300px;
+    height:300px;
+    bottom:0px;
+    right:25%;
+    left:25%;
+    margin-left:-150px;
+}
+
+#districts{
+    width: 50%;
+    position:absolute;
+    width:300px;
+    height:300px;
+    bottom:0px;
+    right:25%;
+    left:75%;
+    margin-left:-150px;
+    
+
+}
+#myProgress {
+    width: 100%;
+  }
+  
+.myBar {
+    width: 1%;
+    height: 20px;
+    background-color: blue;   
+  }
+  
+.d1{
+    display: flex;
+    flex-direction:row;
+    text-align: left;
+   
+}
+.num1{
+    font-size: 42px;
+    color:lightgreen;
+}
